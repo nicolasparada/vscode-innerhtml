@@ -1,0 +1,50 @@
+{
+    "fileTypes": [],
+    "injectionSelector": "L:source.js -comment -string, L:source.jsx -comment -string,  L:source.js.jsx -comment -string, L:source.ts -comment -string, L:source.tsx -comment -string",
+    "injections": {
+        "L:source": {
+            "patterns": [
+                {
+                    "match": "<",
+                    "name": "invalid.illegal.bad-angle-bracket.html"
+                }
+            ]
+        }
+    },
+    "patterns": [
+        {
+            "name": "string.template.js",
+            "contentName": "meta.embedded.block.html",
+            "begin": "(\\.)(innerHTML|outerHTML)\\s+(\\+?=)\\s+(`)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.accessor.js"
+                },
+                "2": {
+                    "name": "variable.other.property.js"
+                },
+                "3": {
+                    "name": "keyword.operator.assignment.js"
+                },
+                "4": {
+                    "name": "punctuation.definition.string.template.begin.js"
+                }
+            },
+            "end": "(`)",
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.definition.string.template.end.js"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.ts#template-substitution-element"
+                },
+                {
+                    "include": "text.html.basic"
+                }
+            ]
+        }
+    ],
+    "scopeName": "inline.innerhtml"
+}

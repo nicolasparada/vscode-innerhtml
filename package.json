@@ -1,0 +1,50 @@
+{
+  "name": "innerhtml",
+  "displayName": "innerHTML Syntax Highlighting",
+  "description": "Syntax highlighting for HTML inside of JavaScript innerHTML template literals",
+  "version": "0.1.0",
+  "author": "Nicolás Parada <parada.nicolas@outlook.com>",
+  "publisher": "nicolasparada",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.15.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "innerhtml",
+    "javascript",
+    "html",
+    "template",
+    "literal"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "injectTo": [
+          "source.js",
+          "source.js.jsx",
+          "source.jsx",
+          "source.ts",
+          "source.tsx",
+          "text.html.basic"
+        ],
+        "scopeName": "inline.innerhtml",
+        "path": "./syntaxes/innerhtml.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.html": "html"
+        }
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolasparada/vscode-innerhtml.git"
+  },
+  "homepage": "https://github.com/nicolasparada/vscode-innerhtml#readme"
+}
