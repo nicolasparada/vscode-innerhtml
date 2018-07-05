@@ -2,11 +2,11 @@
   "name": "innerhtml",
   "displayName": "innerHTML Syntax Highlighting",
   "description": "Syntax highlighting for HTML inside of JavaScript innerHTML template literals",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Nicolás Parada <parada.nicolas@outlook.com>",
   "publisher": "nicolasparada",
   "galleryBanner": {
-    "color": "#1e1e1e",
+    "color": "#000",
     "theme": "dark"
   },
   "icon": "images/icon.png",
@@ -37,7 +37,9 @@
         "scopeName": "inline.innerhtml",
         "path": "./syntaxes/innerhtml.json",
         "embeddedLanguages": {
-          "meta.embedded.block.html": "html"
+          "meta.embedded.block.html": "html",
+          "meta.embedded.block.css": "css",
+          "source.css": "css"
         }
       }
     ]
